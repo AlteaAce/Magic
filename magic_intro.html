@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magic: The Gathering — Initiation</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="mana-master/css/mana.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+<div class="kb-hint" id="kbhint">← → ou ESPACE pour naviguer</div>
+
+<div class="deck" id="deck">
+
+  <!-- SLIDE 0: TITRE -->
+  <div class="slide active slide-home" data-n="0">
+    <div class="slide-inner">
+      <div class="slide-header">
+        <span class="eyebrow">Initiation</span>
+        <span class="slide-counter">1 / 8</span>
+      </div>
+      <div class="slide-content" style="justify-content:center; align-items:center;">
+        <div class="title-block">
+          <h1>Magic:<br>The Gathering</h1>
+          <div class="subtitle">Tout ce qu'il faut savoir pour jouer</div>
+          <div class="title-badge">
+            <div class="mana-pip pip-w"><i class="ms ms-w"></i></div>
+            <div class="mana-pip pip-u"><i class="ms ms-u"></i></div>
+            <div class="mana-pip pip-b"><i class="ms ms-b"></i></div>
+            <div class="mana-pip pip-r"><i class="ms ms-r"></i></div>
+            <div class="mana-pip pip-g"><i class="ms ms-g"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 1: CONCEPT -->
+  <div class="slide" data-n="1">
+    <div class="slide-inner">
+      <div class="slide-header">
+        <span class="eyebrow">Le concept</span>
+        <span class="slide-counter">2 / 8</span>
+      </div>
+      <div class="slide-content">
+        <div class="section-title">Deux mages s'affrontent</div>
+        <div class="section-rule"></div>
+        <div class="section-lead">Chaque joueur commence avec <strong style="color:var(--gold-light)">20 points de vie</strong> et un deck de <strong style="color:var(--gold-light)">60 cartes</strong>. Le premier à tomber à 0 PV perd.
+        <br>
+        Pour un format initiation, nous comptons généralement 20 ou 30 cartes.</div>
+        <div class="card-grid">
+          <div class="mcard">
+            <span class="mcard-icon">🌲</span>
+            <div class="mcard-type">Permanent</div>
+            <div class="mcard-name">Terrain</div>
+            <div class="mcard-desc">Produit du mana — l'énergie pour lancer des sorts</div>
+          </div>
+          <div class="mcard">
+            <span class="mcard-icon">🐉</span>
+            <div class="mcard-type">Permanent</div>
+            <div class="mcard-name">Créature</div>
+            <div class="mcard-desc">Attaque l'adversaire et bloque ses attaques</div>
+          </div>
+          <div class="mcard">
+            <span class="mcard-icon">⚡</span>
+            <div class="mcard-type">Sort</div>
+            <div class="mcard-name">Éphémère</div>
+            <div class="mcard-desc">Joué à tout moment, même pendant le tour adverse</div>
+          </div>
+          <div class="mcard">
+            <span class="mcard-icon">📜</span>
+            <div class="mcard-type">Sort</div>
+            <div class="mcard-name">Rituel</div>
+            <div class="mcard-desc">Joué uniquement pendant votre propre tour</div>
+          </div>
+          <div class="mcard">
+            <span class="mcard-icon">✨</span>
+            <div class="mcard-type">Permanent</div>
+            <div class="mcard-name">Enchantement</div>
+            <div class="mcard-desc">Reste en jeu et produit un effet continu</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 2: LE MANA -->
+  <div class="slide" data-n="2">
+    <div class="slide-inner">
+      <div class="slide-header">
+        <span class="eyebrow">La ressource fondamentale</span>
+        <span class="slide-counter">3 / 8</span>
+      </div>
+      <div class="slide-content">
+        <div class="section-title">Le Mana</div>
+        <div class="section-rule"></div>
+        <div class="section-lead">Le mana est l'énergie qui permet de lancer des sorts. Il vient des terrains.</div>
+        <div class="mana-flow">
+          <div class="mana-step">
+            <div class="big">🌲</div>
+            <div class="label">Poser un terrain<br><em style="font-size:12px;color:var(--gold-dim)">1 par tour maximum</em></div>
+          </div>
+          <div class="mana-arrow">→</div>
+          <div class="mana-step">
+            <div class="big">↪</div>
+            <div class="label">L'engager<br><em style="font-size:12px;color:var(--gold-dim)">incliner la carte</em></div>
+          </div>
+          <div class="mana-arrow">→</div>
+          <div class="mana-step">
+            <div class="big" style="font-family:'Cinzel',serif;font-size:28px;color:var(--gold);"><i class="ms ms-1"></i></div>
+            <div class="label">Obtenir 1 mana<br><em style="font-size:12px;color:var(--gold-dim)">dépensé sur un sort</em></div>
+          </div>
+          <div class="mana-arrow">→</div>
+          <div class="mana-step">
+            <div class="big">🐉</div>
+            <div class="label">Lancer un sort<br><em style="font-size:12px;color:var(--gold-dim)">en payant son coût</em></div>
+          </div>
+        </div>
+        <div class="tip-list" style="margin-top:8px;">
+          <div class="tip">
+            <span class="tip-icon">💡</span>
+            <div class="tip-text">Le coût est en <strong>haut à droite</strong> de la carte. Ex: <strong><i class="ms ms-2"></i> <i class="ms ms-u"></i></strong> = 2 manas quelconques + 1 mana vert. Le chiffre dans un cercle gris = mana de n'importe quelle couleur.
+            <div class="tip-cards">
+              <img src="img/card_Mirrorhall-Mimic.jpg" alt="Carte Magic avec coût de mana" style="margin-top:8px; max-height:250px; height:auto;">
+              <img src="img/card_Cloud.png" alt="Carte Magic avec coût de mana" style="margin-top:8px; max-height:250px; height:auto;">
+              <img src="img/card_Mutinerie-de-masse.jpg" alt="Carte Magic avec coût de mana" style="margin-top:8px; max-height:250px; height:auto;"> 
+            </div>
+          </div>
+            
+          </div>
+          <div class="tip">
+            <span class="tip-icon">⚠️</span>
+            <div class="tip-text">Un terrain engagé ne se redresse qu'au <strong>début de votre prochain tour</strong>. Planifiez vos dépenses !</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 3: ZONES DE JEU -->
+  <div class="slide" data-n="3">
+    <div class="slide-inner">
+      <div class="slide-header">
+        <span class="eyebrow">Le plateau</span>
+        <span class="slide-counter">4 / 8</span>
+      </div>
+      <div class="slide-content">
+        <div class="section-title">Les zones de jeu</div>
+        <div class="section-rule"></div>
+        <div class="section-lead">Chaque joueur possède les mêmes zones.</div>
+        <div class="zones">
+          <div class="zone-card">
+            <span class="zone-icon">⚔️</span>
+            <div>
+              <div class="zone-name">Champ de bataille</div>
+              <div class="zone-desc">Les permanents en jeu : terrains, créatures, enchantements.</div>
+            </div>
+          </div>
+          <div class="zone-card">
+            <span class="zone-icon">🔥</span>
+            <div>
+              <div class="zone-name">Cimetière</div>
+              <div class="zone-desc">Cartes utilisées, détruites ou défaussées. Face visible.</div>
+            </div>
+          </div>
+          <div class="zone-card">
+            <span class="zone-icon">🤲</span>
+            <div>
+              <div class="zone-name">Main</div>
+              <div class="zone-desc">Les cartes que vous tenez. 7 cartes au départ. Max 7 en fin de tour.</div>
+            </div>
+          </div>
+          <div class="zone-card">
+            <span class="zone-icon">📚</span>
+            <div>
+              <div class="zone-name">Bibliothèque</div>
+              <div class="zone-desc">Votre deck, face cachée. On pioche une carte au début de chaque tour.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 4: TOUR DE JEU -->
+  <div class="slide" data-n="4">
+    <div class="slide-inner">
+      <div class="slide-header">
+        <span class="eyebrow">Structure d'un tour</span>
+        <span class="slide-counter">5 / 8</span>
+      </div>
+      <div class="slide-content">
+        <div class="section-title">Déroulement d'un tour</div>
+        <div class="section-rule"></div>
+        <div class="steps">
+          <div class="step">
+            <span class="step-num">01</span>
+            <span class="step-text"><strong>Dégagement</strong> — Redressez <em>toutes</em> vos cartes engagées. Votre mana est reconstitué.</span>
+          </div>
+          <div class="step">
+            <span class="step-num">02</span>
+            <span class="step-text"><strong>Phase d'entretien</strong> — Sert à déclencher des capacités spécifiques de certaines cartes.</span>
+          </div>
+          <div class="step">
+            <span class="step-num">03</span>
+            <span class="step-text"><strong>Pioche</strong> — Prenez 1 carte sur le dessus de votre bibliothèque.</span>
+          </div>
+          <div class="step">
+            <span class="step-num">04</span>
+            <span class="step-text"><strong>Phase d'actions</strong> — Posez jusqu'à 1 terrain. Lancez autant de sorts que vous pouvez payer.</span>
+          </div>
+          <div class="step">
+            <span class="step-num">05</span>
+            <span class="step-text"><strong>Combat</strong> — Déclarez vos attaquants → l'adversaire choisit ses bloqueurs → les dégâts sont résolus.</span>
+          </div>
+          <div class="step">
+            <span class="step-num">06</span>
+            <span class="step-text"><strong>2ème phase d'actions</strong> — Lancez encore des sorts si besoin (avant d'avoir vu le résultat du combat).</span>
+          </div>
+          <div class="step">
+            <span class="step-num">06</span>
+            <span class="step-text"><strong>Fin de tour</strong> — Si vous avez plus de <strong>7 cartes en main</strong>, défaussez jusqu'à 7.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 5: LE COMBAT -->
+  <div class="slide" data-n="5">
+    <div class="slide-inner">
+      <div class="slide-header">
+        <span class="eyebrow">Résolution des attaques</span>
+        <span class="slide-counter">6 / 8</span>
+      </div>
+      <div class="slide-content">
+        <div class="section-title">Le Combat</div>
+        <div class="section-rule"></div>
+        <div class="combat-row">
+          <div class="combat-card">
+            <span class="role">Attaquant</span>
+            <div class="creature-name">Gobelin Frénétique</div>
+            <div class="stats">3 / 1</div>
+            <div style="font-size:12px;color:var(--parchment-dim);margin-top:4px;">Inflige 3 dégâts, mais n'a qu'1 PV</div>
+          </div>
+          <div class="vs">⚔</div>
+          <div class="combat-card">
+            <span class="role">Bloqueur</span>
+            <div class="creature-name">Ours Sylvestre</div>
+            <div class="stats">2 / 2</div>
+            <div style="font-size:12px;color:var(--parchment-dim);margin-top:4px;">Inflige 2 dégâts, a 2 PV</div>
+          </div>
+        </div>
+        <div class="combat-result">
+          <p>→ Le Gobelin reçoit <strong>2 dégâts</strong> (mortels pour 1 PV) : il est détruit.</p>
+          <p>→ L'Ours reçoit <strong>3 dégâts</strong> (mortels pour 2 PV) : il est aussi détruit.</p>
+          <p style="color:var(--gold-dim);">→ <em>Si personne ne bloque : les 3 dégâts du Gobelin vont directement sur les PV adverses.</em></p>
+        </div>
+        <div class="tip-list" style="margin-top:16px;">
+          <div class="tip">
+            <span class="tip-icon">⚠️</span>
+            <div class="tip-text">Les créatures jouées ce tour ont le <strong>mal des transports</strong> — elles ne peuvent pas attaquer avant le tour suivant.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 6: RÈGLES CLÉS -->
+  <div class="slide" data-n="6">
+    <div class="slide-inner">
+      <div class="slide-header">
+        <span class="eyebrow">À ne pas oublier</span>
+        <span class="slide-counter">7 / 8</span>
+      </div>
+      <div class="slide-content">
+        <div class="section-title">Les 5 règles d'or</div>
+        <div class="section-rule"></div>
+        <div class="tip-list">
+          <div class="tip">
+            <span class="tip-icon">🌲</span>
+            <div class="tip-text"><strong>1 terrain par tour maximum</strong> — c'est votre ressource la plus précieuse. Ne la gaspillez pas.</div>
+          </div>
+          <div class="tip">
+            <span class="tip-icon">⏳</span>
+            <div class="tip-text"><strong>Mal des transports</strong> — une créature posée ce tour ne peut attaquer qu'au tour suivant (sauf mention "Célérité").</div>
+          </div>
+          <div class="tip">
+            <span class="tip-icon">📖</span>
+            <div class="tip-text"><strong>Bibliothèque vide</strong> — si vous devez piocher et qu'il n'y a plus de carte, vous perdez immédiatement.</div>
+          </div>
+          <div class="tip">
+            <span class="tip-icon">🛡️</span>
+            <div class="tip-text"><strong>Bloquer est optionnel</strong> — vous pouvez laisser passer les attaques pour protéger vos créatures.</div>
+          </div>
+          <div class="tip">
+            <span class="tip-icon">📏</span>
+            <div class="tip-text"><strong>Les dégâts se résolvent simultanément</strong> — l'attaquant et le bloqueur peuvent se tuer mutuellement.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 7: ON JOUE -->
+  <div class="slide" data-n="7">
+    <div class="slide-inner">
+      <div class="slide-header">
+        <span class="eyebrow">Place au jeu</span>
+        <span class="slide-counter">8 / 8</span>
+      </div>
+      <div class="slide-content" style="justify-content:center;align-items:center;">
+        <div class="final-content">
+          <div class="color-pips">
+            <div class="mana-pip pip-w"><i class="ms ms-w"></i></div>
+            <div class="mana-pip pip-u"><i class="ms ms-u"></i></div>
+            <div class="mana-pip pip-b"><i class="ms ms-b"></i></div>
+            <div class="mana-pip pip-r"><i class="ms ms-r"></i></div>
+            <div class="mana-pip pip-g"><i class="ms ms-g"></i></div>
+          </div>
+          <h2>À vos decks !</h2>
+          <p>Chacun choisit un deck mono-couleur de 40 cartes.<br>On joue à voix haute pour les premières parties.</p>
+          <div style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap;">
+            <div class="mcard" style="min-width:140px; text-align:left;">
+              <span class="mcard-icon">🎯</span>
+              <div class="mcard-name">Objectif</div>
+              <div class="mcard-desc">Réduire les PV adverses à 0</div>
+            </div>
+            <div class="mcard" style="min-width:140px; text-align:left;">
+              <span class="mcard-icon">🃏</span>
+              <div class="mcard-name">Deck</div>
+              <div class="mcard-desc">40 cartes, 1 couleur, 7 cartes en main</div>
+            </div>
+            <div class="mcard" style="min-width:140px; text-align:left;">
+              <span class="mcard-icon">❤️</span>
+              <div class="mcard-name">Points de vie</div>
+              <div class="mcard-desc">20 PV chacun au départ</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- NAV -->
+<nav>
+  <button id="btn-prev" disabled aria-label="Précédent">←</button>
+  <div class="nav-dots" id="dots"></div>
+  <button id="btn-next" aria-label="Suivant">→</button>
+</nav>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.getElementById('dots');
+  const btnPrev = document.getElementById('btn-prev');
+  const btnNext = document.getElementById('btn-next');
+  const progress = document.getElementById('progress');
+  const kbhint = document.getElementById('kbhint');
+  const N = slides.length;
+  let current = 0;
+
+  slides.forEach((_, i) => {
+    const d = document.createElement('button');
+    d.className = 'dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('aria-label', 'Slide ' + (i+1));
+    d.onclick = () => goTo(i);
+    dots.appendChild(d);
+  });
+
+  function goTo(n) {
+    if (n < 0 || n >= N) return;
+    const prev = slides[current];
+    prev.classList.remove('active');
+    prev.classList.add('exit');
+    setTimeout(() => prev.classList.remove('exit'), 600);
+    current = n;
+    slides[current].classList.add('active');
+    document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current));
+    btnPrev.disabled = current === 0;
+    btnNext.disabled = current === N - 1;
+    progress.style.width = ((current + 1) / N * 100) + '%';
+  }
+
+  btnNext.onclick = () => goTo(current + 1);
+  btnPrev.onclick = () => goTo(current - 1);
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); goTo(current + 1); }
+    if (e.key === 'ArrowLeft') goTo(current - 1);
+  });
+
+  progress.style.width = (1 / N * 100) + '%';
+
+</script>
+</body>
+</html>
